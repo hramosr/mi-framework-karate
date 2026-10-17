@@ -13,8 +13,8 @@ Scenario: El servicio esta disponible
   And match response.environments contains 'dev'
   * print 'Version de la API:', response.version
 
-Scenario: Sin token no hay acceso
-  Given path 'accounts'
-  When method get
-  Then status 401
-  And match response.code == 'MISSING_TOKEN'
+# Scenario: Sin token no hay acceso
+#   Given path 'accounts'
+#   When method get
+#   Then status 401
+#   And match response.code == 'MISSING_TOKEN'

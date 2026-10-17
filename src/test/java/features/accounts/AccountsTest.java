@@ -7,6 +7,7 @@ class AccountsTest {
 
     @Karate.Test
     Iterable<DynamicNode> testAccount() {
-        return Karate.run("accounts").relativeTo(getClass());
+        // return Karate.run("accounts").relativeTo(getClass());
+        return Karate.run().relativeTo(getClass());
     }
 }
