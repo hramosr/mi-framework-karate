@@ -29,6 +29,7 @@ concurrency:
 jobs:
   karate:
     runs-on: ubuntu-latest
+    environment: Dev   # GitHub Environment donde viven NOVUS_USER y NOVUS_PASS
     timeout-minutes: 20
     env:
       KARATE_ENV: ${{ inputs.env || 'qa' }}
