@@ -16,7 +16,7 @@ class ParallelTest {
     void testParallel() {
         SuiteResult result = Runner.path("classpath:features")
                 .tags("~@ignore")
-                .outputJunitXml(true)       // para Azure DevOps
+                .outputJunitXml(true)       // para el reporte en CI
                 .outputCucumberJson(true)   // para dashboards
                 .parallel(5);
         assertFalse(result.isFailed(), "Hay escenarios fallidos: revisa el reporte");
