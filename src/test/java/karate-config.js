@@ -32,5 +32,15 @@ function fn() {
   karate.configure('headers', { Authorization: 'Bearer ' + auth.token });
   // ---------------------------------------------------------------------------
 
+  karate.configure('logging', {
+    report: 'debug',
+    console: 'info',
+    pretty: true,
+    mask: {
+      headers: ['Authorization', 'Cookie'],
+      jsonPaths: ['$.password', '$..token']
+    }
+  });
+  
   return config;
 }

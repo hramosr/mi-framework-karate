@@ -3,6 +3,7 @@ Feature: Accounts
     Background:
       Given url baseUrl
 
+
     Scenario: Detalle de una cuenta (path)
       Given path 'accounts', 'acc-001'
       When method get

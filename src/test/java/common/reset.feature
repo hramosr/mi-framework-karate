@@ -1,7 +1,7 @@
 @ignore
 Feature: Helper - reiniciar mis datos (POST /me/reset)
 
-  Scenario:
+  Scenario: reset
     Given url baseUrl
     And path 'me', 'reset'
     When method post
